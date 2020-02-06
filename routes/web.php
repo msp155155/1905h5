@@ -10,7 +10,15 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+//
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+Route::get('/','Index\IndexController@index');  //首页
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/user/reg','User\UserController@reg');//注册页面
+Route::get('/user/login','User\UserController@login');//登陆页面
+Route::post('/user/regDo','User\UserController@regDo');//注册执行
+Route::post('/user/loginDo','User\UserController@loginDo');//登陆执行
+
+
